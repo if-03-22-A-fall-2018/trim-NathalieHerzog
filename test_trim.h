@@ -1,9 +1,9 @@
 /*----------------------------------------------------------
- *				HTBLA-Leonding / Klasse: <your class>
+ *				HTBLA-Leonding / Klasse: 2AHIF
  * ---------------------------------------------------------
  * Exercise Number: 0
  * Title:			test_trim.h
- * Author:			P. Bauer
+ * Author:			N. Herzog
  * Due Date:		March 14, 2015
  * ----------------------------------------------------------
  * Description:

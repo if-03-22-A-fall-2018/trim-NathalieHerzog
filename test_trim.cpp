@@ -1,7 +1,7 @@
 /*----------------------------------------------------------
  *				HTBLA-Leonding / Klasse: <your class>
  * ---------------------------------------------------------
- * Exercise Number: 0
+ * Exercise Number: 8
  * Title:			test_trim.cpp
  * Author:			P. Bauer
  * Due Date:		March 15, 2015
@@ -31,7 +31,7 @@ TEST(empty_substring)
 }
 
 /******************************************************************************
- * total_string: describe yourself.
+ * total_string: returns the original string.
  *
  *
  ******************************************************************************/
@@ -45,7 +45,7 @@ TEST(total_string)
 }
 
 /******************************************************************************
- * leading_blanks: describe yourself.
+ * leading_blanks: cuts off blank space at the beginning.
  *
  *
  ******************************************************************************/
@@ -59,7 +59,7 @@ TEST(leading_blanks)
 }
 
 /******************************************************************************
- * trailing_blanks: describe yourself.
+ * trailing_blanks: cuts off blank space after the text.
  *
  *
  ******************************************************************************/
@@ -73,8 +73,8 @@ TEST(trailing_blanks)
 }
 
 /******************************************************************************
- * leading_and_trailing_blanks: describe yourself.
- *
+ * leading_and_trailing_blanks: cuts off blank space before and after 
+ * the text.
  *
  ******************************************************************************/
 TEST(leading_and_trailing_blanks)
