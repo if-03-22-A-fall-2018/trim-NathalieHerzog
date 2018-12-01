@@ -26,18 +26,15 @@ void trim (const char* str, char* trimmed)
 
     for(int i = 0; i < STRLEN; i++)
     {
-        if(str[i] == ' ' && !trimDone)
+        if(str[i] != ' ' && !trimDone)
         {
-            if(str[i+1] >= 'A' || str[i+1] <= 'Z')
+            for(int u = 0; i < STRLEN; u++)
             {
-                for(int u = 0; u < STRLEN; u++)
-                {
-                    trimmed[u] = str[i+1];
-                    i++;
-                }
-
-                trimDone = true;
+                trimmed[u] = str[i];
+                i++;
             }
+
+            trimDone = true;
         }
     }
 
@@ -47,14 +44,11 @@ void trim (const char* str, char* trimmed)
     {
         if(str[i] == ' ' && !trimDone)
         {
-            if(str[i-1] >= 'A' || str[i-1] <= 'Z')
-            {
-                for(int u = STRLEN; u > 0; u++)
-                {
-                    trimmed[u] = '\0';
-                }
+            trimmed[i] = '\0';   
 
-                trimDone = true;
+            if(str[i-1] != ' ')
+            { 
+                trimDone = true;       
             }
         }
     }
