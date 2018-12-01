@@ -14,6 +14,7 @@
 #include "trim.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 void trim (const char* str, char* trimmed)
 {
@@ -33,11 +34,10 @@ void trim (const char* str, char* trimmed)
         }
     }
     
-    int i = strlen(str);
-    while(str[i] == ' ' || str[i] == '\0')
+    size_t n = strlen(str);
+    while(trimmed[n] == ' ' || trimmed[n] == '\0')
     {
-        i--;
+        trimmed[n] = '\0';
+        n--;
     }
-
-    trimmed[i+1] = '\0';
 }
