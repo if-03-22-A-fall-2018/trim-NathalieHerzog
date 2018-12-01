@@ -19,11 +19,6 @@ void trim (const char* str, char* trimmed)
 {
     bool trimDone = false;
 
-    /*if(strlen(str) == 0)
-    {
-        trimmed = strdup("");
-    }*/
-
     for(int i = 0; i < STRLEN; i++)
     {
         if(str[i] != ' ' && !trimDone)
@@ -37,19 +32,12 @@ void trim (const char* str, char* trimmed)
             trimDone = true;
         }
     }
-
-    trimDone = false;
-
-    for(int i = STRLEN; i > 0; i--)
+    
+    int i = strlen(str);
+    while(str[i] == ' ' || str[i] == '\0')
     {
-        if(str[i] == ' ' && !trimDone)
-        {
-            trimmed[i] = '\0';   
-
-            if(str[i-1] != ' ')
-            { 
-                trimDone = true;       
-            }
-        }
+        i--;
     }
+
+    trimmed[i+1] = '\0';
 }
